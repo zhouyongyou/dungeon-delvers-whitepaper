@@ -5,6 +5,3 @@ structure:
   summary: SUMMARY.md
 
 format: markdown
-
-redirects:
-  # Add any redirects if needed
