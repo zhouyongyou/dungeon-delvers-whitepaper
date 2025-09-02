@@ -123,6 +123,6 @@ function requestRandomForUser(
 
 > **💡 開發者注意**: 所有智能合約代碼都將在 GitHub 上開源，歡迎社群貢獻和審計。我們相信透明度是建立信任的基礎。
 
-**技術文檔**: [GitHub Repository](https://github.com/soulbound-saga)  
+**技術文檔**: [GitHub Repository](https://github.com/zhouyongyou)  
 **合約地址**: [BSCScan 驗證合約](https://bscscan.com/)  
-**審計報告**: 即將發布
+**審計報告**: V1.0 版本即將發布
