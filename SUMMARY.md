@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [🏰 DungeonDelvers (Soulbound Saga) V1.0 白皮書](README.md)
 
 ## Getting Started
 
