@@ -1,17 +1,17 @@
 # Table of contents
 
-* [🏰 Soulbound Saga 白皮書](README.md)
+* [🏰 DungeonDelvers (Soulbound Saga) V1.0 白皮書](README.md)
 
-## 🌟 歡迎踏入 Soulbound Saga
+## 🌟 歡迎踏入 DungeonDelvers
 
-* [🚀 快速開始指南](10-quickstart-guide.md)
+* [🚀 新手入門指南](10-quickstart-guide.md)
 
 ## 📖 核心內容
 
 * [1. 史詩傳奇的開端](01-project-overview.md)
-* [2. 完全上鏈的 Roguelike 機制](02-core-gameplay.md)
-* [3. $SOUL 代幣經濟](03-tokenomics.md)
-* [4. NFT 屬性詳解](04-nft-attributes.md)
+* [2. 完全上鏈的遊戲機制](02-core-gameplay.md)
+* [3. $SOUL 代幣經濟學](03-tokenomics.md)
+* [4. NFT 系統詳解](04-nft-attributes.md)
 
 ## 🔧 技術與發展
 
