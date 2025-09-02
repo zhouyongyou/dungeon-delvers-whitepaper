@@ -2,13 +2,13 @@
 
 > **Fully On-Chain Roguelike on BNB Chain**  
 > **Delve Dungeons & Earn $SOUL**  
-> **Built by CN builders for the world**
+> **Built by Taiwan builders for the world**
 
 <figure><img src=".gitbook/assets/logo-192x192.png" alt=""><figcaption><p>踏入靈魂契約的數位傳奇</p></figcaption></figure>
 
 _最後更新時間: 2025年9月 - V1.0 第一代遊戲_
 
-> **⚡ 全新品牌**：Soulbound Saga 代表著我們對 Web3 遊戲未來的重新定義。完全上鏈、真正去中心化、由中國建造師為全世界打造的 Roguelike 傳奇。
+> **⚡ 全新品牌**：Soulbound Saga 代表著我們對 Web3 遊戲未來的重新定義。完全上鏈、真正去中心化、由台灣建造師為全世界打造的 Roguelike 傳奇。
 
 #### 🌟 歡迎踏入靈魂契約的史詩世界
 
@@ -67,7 +67,7 @@ DungeonDelvers 不只是遊戲，它是一個完整的數位生態系統，為 W
 [📱 Telegram 社群](https://t.me/Soulbound_Saga)  
 [🐦 Twitter 官方](https://x.com/Soulbound_Saga)
 
-**一起在区块链上征服地下城！**
+**一起在區塊鏈上征服地下城！**
 
 <figure><img src=".gitbook/assets/cover-1200x400.png" alt=""><figcaption></figcaption></figure>
 
