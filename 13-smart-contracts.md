@@ -38,8 +38,8 @@
 ### 🦸‍♂️ NFT 資產系統
 ```bash
 # 核心遊戲 NFT
-⚔️ 英雄 NFT (Hero): 0xdb40cb3a1ba6fd3e8e6323c296f3f17cc7ec9c0e
-🛡️ 神器 NFT (Relic): 0xb6038db5c6a168c74995dc9a0c8a6ab1910198fd
+⚔️ 英雄 NFT (Hero): 0x1723b67ef81c4d2c5dd2027776ae8bdbdd61636b
+🛡️ 神器 NFT (Relic): 0x7a78a54010b0d201c026ef0f4a9456b464dfce11
 
 # 組隊系統  
 👥 隊伍系統 (Party): 0xb393e482495bacde5aaf08d25323146cc5b9567f
@@ -51,7 +51,7 @@
 ```bash
 # 玩家檔案與 VIP 系統
 📊 玩家檔案 (PlayerProfile): 0xd32d3ab232cd2d13a80217c0f05a9f3bdc51b44b
-💰 資金庫 (PlayerVault): 0xe3c03d3e270d7eb3f8e27017790135f5a885a66f
+💰 資金庫 (PlayerVault): 0xb8807c99ade19e4e2db5cf48650474f10ff874a3
 🌟 VIP 質押 (VIPStaking): 0x409d964675235a5a00f375053535fce9f6e79882
 
 # 隨機數服務
