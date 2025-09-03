@@ -28,7 +28,7 @@ Soulbound Saga 建立在 **BNB Chain** 上，由多個互相協作的智能合�
 └── 🏆 VIPStaking.sol (VIP 質押系統)
 ```
 
-#### **5.3 鏈上隨機性實現** ✅ **已完全實裝 V25**
+#### **5.3 鏈上隨機性實現** ✅ **已完全實裝 v1.3.3**
 
 **問題：** 區塊鏈是確定性的，如何實現真正的隨機？
 
@@ -110,7 +110,7 @@ function requestRandomForUser(
 - ✅ NFT 鑄造和交易
 
 **2025 Q4:**
-- ✅ Chainlink VRF 集成 (已完成 V25)
+- ✅ Chainlink VRF 集成 (已完成 v1.3.3)
 - 🔄 高級地城機制
 - 🔄 移動端 DApp
 
