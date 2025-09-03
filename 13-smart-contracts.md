@@ -17,11 +17,11 @@
 ### 🏰 遊戲核心系統
 ```bash
 # 核心治理合約
-🏰 遊戲核心 (DungeonCore): 0x5b64a5939735ff762493d9b9666b3e13118c5722
+🏰 遊戲核心 (DungeonCore): 0xa94b609310f8fe9a6db5cd66faaf64cd0189581f
 
 # 價格與隨機數服務  
-💎 價格預言機 (PriceOracle): 0xee322eff70320759487f67875113c062ac1f4cfb
-📚 地下城數據 (DungeonData): 0x474ee307d9cd81670a4773e4e9a124853fa51db0
+💎 價格預言機 (PriceOracle): 0x21928de992cb31ede864b62bc94002fb449c2738
+📚 地下城數據 (DungeonData): 0x30dcbe703b258fa1e421d22c8ada643da51ceb4c
 ```
 
 ### 🎮 遊戲功能合約
@@ -38,8 +38,8 @@
 ### 🦸‍♂️ NFT 資產系統
 ```bash
 # 核心遊戲 NFT
-⚔️ 英雄 NFT (Hero): 0x3052ab6c5b307478d943beba63efcdd97aecb526
-🛡️ 神器 NFT (Relic): 0x5b967d67c7cbbcba140820757c670c99c61ee530
+⚔️ 英雄 NFT (Hero): 0xdb40cb3a1ba6fd3e8e6323c296f3f17cc7ec9c0e
+🛡️ 神器 NFT (Relic): 0xb6038db5c6a168c74995dc9a0c8a6ab1910198fd
 
 # 組隊系統  
 👥 隊伍系統 (Party): 0x3cfed1ac185f66830342a9a796cb5bb4ef611fe6
@@ -51,11 +51,11 @@
 ```bash
 # 玩家檔案與 VIP 系統
 📊 玩家檔案 (PlayerProfile): 0xc869e2dcc64f76149e8392a0735b76bcfe79669a
-💰 資金庫 (PlayerVault): 0x6a3fb49538c58cbeb537daf12c276cbc97c6e8ec
-🌟 VIP 質押 (VIPStaking): 0xacce5647880211c07d17eeae49364bb7db36aa3c
+💰 資金庫 (PlayerVault): 0xe3c03d3e270d7eb3f8e27017790135f5a885a66f
+🌟 VIP 質押 (VIPStaking): 0x409d964675235a5a00f375053535fce9f6e79882
 
 # 隨機數服務
-🎲 隨機數管理 (VRFManager): 0x934c8cd6c4f39673ca44c9e88a54cbe2f71782b9
+🎲 隨機數管理 (VRFManager): 0x601f0a1e5a0cacfa39b502fd7a9ac5024f53ae40
 ```
 
 ## 13.5 代幣系統合約
@@ -63,10 +63,10 @@
 ### 🪙 遊戲代幣
 ```bash
 # 主要遊戲代幣
-💎 SOUL 代幣 (TSOUL): 0xb73fe158689eab3396b64794b573d4bec7113412
+💎 SOUL 代幣 (TSOUL): 0x1a98769b8034d400745cc658dc204cd079de36fa
 
 # 測試輔助代幣  
-💵 測試美元 (TUSD1): 0x9dc0b768533222fddbe6a9bd71ead96a7c612c61
+💵 測試美元 (TUSD1): 0x916a2a1eb605e88561139c56af0698de241169f2
 ```
 
 **代幣說明**：
