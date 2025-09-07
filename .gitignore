@@ -15,3 +15,28 @@ npm-debug.log
 # Temporary files
 *.tmp
 *.temp
+
+# Security: Sensitive data protection
+.env*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+config/secrets/
+secrets/
+private/
+
+# Security: Backup files that might contain sensitive data
+*.backup
+*.bak
+*.orig
+*~
+
+# Security: Log files that might contain sensitive information
+*.log
+logs/
+
+# Security: IDE and editor files that might store sensitive data
+.vscode/settings.json
+.idea/workspace.xml
