@@ -1,17 +1,17 @@
 # 13. 智能合約地址 (Smart Contract Addresses)
 
-> **⚠️ V1.3.8.0 測試合約地址** - 目前為內部測試階段，正式上線前將進行最終優化
+> **🎯 V1.3.9.1 正式合約地址** - NFT Trinity 重新部署，效能和安全性全面優化
 
 ## 13.1 核心提醒
 
-⚠️ **正式上線版本**：以下為 V1.3.8.0 正式環境的合約地址 (正式部署: 2025-09-10T17:00:00+08:00)。
+✅ **最新正式版本**：以下為 V1.3.9.1 正式環境的合約地址 (最新部署: 2025-09-12T02:00:00+08:00)。
 
 **網路資訊**：
 - **區塊鏈**: Binance Smart Chain (BSC) 主網
 - **Chain ID**: 56
 - **區塊瀏覽器**: [BSCScan](https://bscscan.com/)
-- **起始區塊**: 60783101 (V1.3.8.1 正式部署)
-- **上線狀態**: V1.3.8.0 正式上線，全面更新合約地址和功能優化
+- **起始區塊**: 60822412 (V1.3.9.1 正式部署)
+- **上線狀態**: V1.3.9.1 正式上線，NFT Trinity 重新部署並修復所有連接問題
 
 ## 13.2 遊戲核心合約
 
@@ -39,8 +39,8 @@
 ### 🦸‍♂️ NFT 資產系統
 ```bash
 # 核心遊戲 NFT
-⚔️ 英雄 NFT (Hero): 0x6d4393ad1507012039a6f1364f70b8de3afcb3bd
-🛡️ 神器 NFT (Relic): 0x3bcb4af9d94b343b1f154a253a6047b707ba74bd
+⚔️ 英雄 NFT (Hero): 0x45a7e3e0ae5077f85ecba051f346667365a32be3
+🛡️ 神器 NFT (Relic): 0xc957c671a7183ae4c4bbd772585961b5cd8d96d2
 
 # 組隊系統  
 👥 隊伍系統 (Party): 0x0d93b2c10d5ff944b3bb47c75b52fca75c92a4cc
@@ -53,7 +53,7 @@
 # 玩家檔案與 VIP 系統
 📊 玩家檔案 (PlayerProfile): 0xa7aab98223268f8049430bdba6d1ba36cbef424a
 💰 資金庫 (PlayerVault): 0x72205a7dca3dbd7a8656107797b0b0604e781413
-🌟 VIP 質押 (VIPStaking): 0x0440634aa6e4028efafefe7683b39e3a7bec0ebc
+🌟 VIP 質押 (VIPStaking): 0x47ad81582b0f8b8167b72ecd960815b2e523bcc1
 
 # 隨機數服務
 🎲 隨機數管理 (VRFManager): 0xfc88901b6bb94d677884edc1dad143c2add2a1c5
@@ -80,12 +80,12 @@
 
 | 功能 | 合約名稱 | 地址 | 狀態 |
 |------|----------|------|------|
-| **英雄鑄造** | Hero | `0x6d43...3bd` | ✅ 已部署 |
-| **神器鑄造** | Relic | `0x3bcb...4bd` | ✅ 已部署 |
+| **英雄鑄造** | Hero | `0x45a7...be3` | ✅ 已部署 |
+| **神器鑄造** | Relic | `0xc957...d2` | ✅ 已部署 |
 | **組隊功能** | Party | `0x0d93...4cc` | ✅ 已部署 |
 | **地下城探險** | DungeonMaster | `0x35a7...77e` | ✅ 已部署 |
 | **英雄升階** | AltarOfAscension | `0xda7f...d7b` | ✅ 已部署 |
-| **VIP 質押** | VIPStaking | `0x0440...ebc` | ✅ 已部署 |
+| **VIP 質押** | VIPStaking | `0x47ad...cc1` | ✅ 已部署 |
 | **資金管理** | PlayerVault | `0x7220...413` | ✅ 已部署 |
 | **隨機數服務** | VRFManager | `0xfc88...1c5` | ✅ 已部署 |
 
