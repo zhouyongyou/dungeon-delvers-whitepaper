@@ -73,7 +73,7 @@ VRFManager.sol     // Chainlink VRF 隨機數
 ### 📊 數據索引層 - dungeon-delvers-subgraph
 **技術棧**: The Graph Protocol + GraphQL  
 **專案位置**: `/Users/sotadic/Documents/GitHub/dungeon-delvers-subgraph`  
-**版本**: v4.1.9  
+**版本**: v1.3.9.6  
 
 **索引數據**:
 ```graphql
