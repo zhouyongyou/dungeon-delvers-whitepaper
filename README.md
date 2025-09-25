@@ -1,4 +1,4 @@
-# 🏰 DungeonDelvers (Soulbound Saga) V1.4.0.0 白皮書
+# 🏰 DungeonDelvers (Soulbound Saga) V1.4.0.3 白皮書
 
 > **Fully On-Chain Roguelike on BNB Chain**  
 > **Delve Dungeons & Earn $SOUL**  
@@ -6,7 +6,7 @@
 
 <figure><img src=".gitbook/assets/logo-192x192.png" alt=""><figcaption><p>踏入靈魂契約的數位傳奇</p></figcaption></figure>
 
-_最後更新時間: 2025年9月 - V1.4.0.0 第一代遊戲_
+_最後更新時間: 2025年9月 - V1.4.0.3 第一代遊戲_
 
 > **⚡ 全新品牌**：Soulbound Saga 代表著我們對 Web3 遊戲未來的重新定義。完全上鏈、真正去中心化、由台灣建造師為全世界打造的 Roguelike 傳奇。
 
@@ -73,6 +73,6 @@ DungeonDelvers 不只是遊戲，它是一個完整的數位生態系統，為 W
 
 ---
 
-**DungeonDelvers (Soulbound Saga) V1.4.0.0** - 在 BNB Chain 上的 NFT 地下城探險遊戲
+**DungeonDelvers (Soulbound Saga) V1.4.0.3** - 在 BNB Chain 上的 NFT 地下城探險遊戲
 
 > *"鑄造英雄，裝備神器，組建隊伍，征服地下城，獲得 $SOUL 獎勵。您準備好開始這段去中心化冒險了嗎？"*
