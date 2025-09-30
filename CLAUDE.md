@@ -7,11 +7,12 @@
 
 ## 生態系統連結
 ```bash
-WHITEPAPER_PATH: /Users/sotadic/Documents/GitHub/dungeon-delvers-whitepaper # 當前專案
-CONTRACTS_PATH: /Users/sotadic/Documents/DungeonDelversContracts
-FRONTEND_PATH: /Users/sotadic/Documents/GitHub/SoulboundSaga
-SUBGRAPH_PATH: /Users/sotadic/Documents/GitHub/dungeon-delvers-subgraph
-BACKEND_PATH: /Users/sotadic/Documents/dungeon-delvers-metadata-server
+# 專案路徑（環境變數形式）
+WHITEPAPER_PATH=${WHITEPAPER_PATH:-~/Documents/GitHub/dungeon-delvers-whitepaper} # 當前專案
+CONTRACTS_PATH=${CONTRACTS_PATH:-~/Documents/DungeonDelversContracts}         # 智能合約
+FRONTEND_PATH=${FRONTEND_PATH:-~/Documents/GitHub/SoulboundSaga}              # React 前端
+SUBGRAPH_PATH=${SUBGRAPH_PATH:-~/Documents/GitHub/dungeon-delvers-subgraph}   # 子圖
+BACKEND_PATH=${BACKEND_PATH:-~/Documents/dungeon-delvers-metadata-server}     # Node.js API
 ```
 
 ## 文檔架構重點

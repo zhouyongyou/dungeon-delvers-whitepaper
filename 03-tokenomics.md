@@ -9,12 +9,12 @@
 * **代幣符號**: $SOUL  
 * **總供應量**: 1,000,000,000 SOUL (10億枚)
 * **所在區塊鏈**: Binance Smart Chain (BSC)
-* **合約地址**: `0x97B2C2a9A11C7b6A020b4bAEaAd349865eaD0bcF` ✅ **已部署**
+* **合約地址**: `0x1a98769b8034d400745cc658dc204cd079de36fa` ✅ **已部署**
 
-⚠️ **測試階段說明**: 
-- 測試環境使用 **TSOUL (測試靈魂碎片)** 符號
-- 正式上線後統一為 **$SOUL** 符號
-- 所有獎勵金額以 USD 價值計算，確保穩定收益
+⚠️ **環境說明**: 
+- 正式主網使用 `$SOUL` 合約（地址如上），所有金庫與兌換皆以該地址為準。
+- 測試/開發環境使用 `TSOUL`，會在 `.env` 及 `contracts/.env` 中以 `TSOUL_ADDRESS` 命名。
+- 建議於部署前對照 [`DungeonDelversContracts/README.md`](../DungeonDelversContracts/README.md) 的合約表確保地址一致。
 
 ### 💵 輔助測試代幣
 * **TUSD1 (測試美元)**: `0x916a2a1eb605e88561139c56af0698de241169f2`
