@@ -29,3 +29,5 @@
 * [Data Transparency](09-data-transparency-simple.md)
 * [Smart Contracts](13-smart-contracts.md)
 * [Multilingual Strategy](12-multilingual-strategy.md)
+* [V1.4.0.3 Updates](14-v1-4-0-3-updates.md)
+* [Security Standards](SECURITY_STANDARDS.md)
