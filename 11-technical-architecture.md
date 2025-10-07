@@ -104,7 +104,7 @@ type Hero {
 ### 🚀 後端 API - dungeon-delvers-metadata-server
 **技術棧**: Node.js + Express.js + ethers.js  
 **專案位置**: `/Users/sotadic/Documents/dungeon-delvers-metadata-server`  
-**版本**: v1.3.4  
+**版本**: v1.4.0.3  
 **部署**: Render  
 
 **API 端點設計**:
@@ -115,17 +115,19 @@ GET /metadata/:type/:id
 // 系統健康檢查  
 GET /health
 GET /api/config/status
+GET /admin/cache-stats
 
 // 配置管理
 POST /api/config/refresh
 ```
 
 **核心特性**:
-- 動態 NFT metadata 生成
+- 動態 NFT metadata 生成（純子圖資料來源，零 RPC 成本）
 - SVG 圖像實時渲染
-- 多層緩存策略 (內存 + CDN)
-- 統一配置管理集成
-- 高可用性和負載均衡
+- 多層緩存策略 (記憶體 + CDN) 與事件觸發式刷新
+- 統一配置管理（支援 `config/contracts.json` 與環境變數覆寫）
+- Goldsky / The Graph 自動切換機制與健康快照 (`/health` 回傳 `subgraphEndpoints`)
+- 高可用性與速率限制、Helmet 安全強化
 
 ### 📚 文檔系統 - dungeon-delvers-whitepaper  
 **技術棧**: GitBook + Markdown  
@@ -158,10 +160,11 @@ graph TD
 ### 📡 配置同步系統
 ```bash
 # 統一配置管理流程
-DungeonDelversContracts/.env.v1  # 主配置源
-├── sync → SoulboundSaga/.env.local          # 前端配置
-├── sync → metadata-server/config/contracts.json  # 後端配置
-└── sync → dungeon-delvers-subgraph/subgraph.yaml  # 子圖配置
+DungeonDelversContracts/config/deployed-addresses.mainnet.json
+├─ scripts/essential/extract-abis.js → SoulboundSaga/src/contracts/abi
+│                                     ↳ dungeon-delvers-metadata-server/abis
+├─ dungeon-delvers-subgraph/scripts/sync-subgraph-manifest.cjs → subgraph.yaml
+└─ metadata-server/config/contracts.json  # 統一配置載入器依此覆寫
 ```
 
 ## 11.4 部署和 CI/CD 策略
