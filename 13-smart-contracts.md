@@ -21,7 +21,7 @@
 🏰 遊戲核心 (DungeonCore): 0x1856c492c58d5d8fdb8899a8b134b8668536d043
 
 # 價格與隨機數服務
-💎 價格預言機 (PriceOracle): 0x1df01c73a300098e3bd191ffb0889cddf798deec
+💎 價格預言機 (PriceOracle): 0xc50d877f3b3aee24f1c96f9626c2f4ce3778dec6
 📚 地下城數據 (DungeonStorage): 0xe43fcdc1c9ceb04d830144cbd0abdf1c35d12bc5
 ```
 
@@ -56,7 +56,7 @@
 🌟 VIP 質押 (VIPStaking): 0x2e6570c9e80f3e9320ac40c9a7c230f9204e729c
 
 # 隨機數服務
-🎲 隨機數管理 (VRFManager): 0xb07e21ac95de12d26434ebd8d2e8103cc2f0310f
+🎲 隨機數管理 (VRFManager): 0x137107f995f2ed9061c1acf01dbe9b06179a90f0
 ```
 
 ## 13.5 代幣系統合約
@@ -87,7 +87,7 @@
 | **英雄升階** | AltarOfAscension | `0x8ee50a6459a01c89095e283d8bac7dcb6c606171` | ✅ 主網運行 |
 | **VIP 質押** | VIPStaking | `0x2e6570c9e80f3e9320ac40c9a7c230f9204e729c` | ✅ 主網運行 |
 | **資金管理** | PlayerVault | `0x3029fa9484d75a7d5c9095815adc257bec95f222` | ✅ 主網運行 |
-| **隨機數服務** | VRFManager | `0xb07e21ac95de12d26434ebd8d2e8103cc2f0310f` | ✅ 主網運行 |
+| **隨機數服務** | VRFManager | `0x137107f995f2ed9061c1acf01dbe9b06179a90f0` | ✅ 主網運行 |
 
 ## 13.7 安全驗證資訊
 
