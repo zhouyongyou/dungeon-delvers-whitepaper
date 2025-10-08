@@ -31,3 +31,4 @@
 * [Multilingual Strategy](12-multilingual-strategy.md)
 * [V1.5.0.0 Updates](14-v1.5.0.0-updates.md)
 * [Security Standards](SECURITY_STANDARDS.md)
+* [Wallet Compatibility](15-wallet-compatibility.md)

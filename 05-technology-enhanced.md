@@ -14,18 +14,19 @@
 
 #### **5.2 智能合約架構**
 
-Soulbound Saga 建立在 **BNB Chain** 上，由多個互相協作的智能合約組成：
+Soulbound Saga 採用模組化部署，**目前僅在 BNB Chain 主網營運**。所有合約皆於 v1.5.0.0 完成升級與驗證，主要模組如下：
 
 ```
-🏛️ DungeonCore (核心治理合約)
-├── ⚔️ SoulDelver.sol (探索者 NFT)
-├── 🔮 SoulRelic.sol (魂器 NFT)
-├── 🏛️ DelverSquad.sol (探索小隊 NFT)
-├── 🏰 DungeonMaster.sol (地城探索邏輯)
-├── 💰 SoulVault.sol (智能金庫)
-├── 📊 SoulProfile.sol (靈魂檔案 SBT)
-├── 🔥 AscensionAltar.sol (升級祭壇)
-└── 🏆 VIPStaking.sol (VIP 質押系統)
+🏛️ DungeonCore.sol          ─ 核心註冊與跨模組協調
+├── ⚔️ Hero.sol              ─ 英雄 NFT（VRF 稀有度）
+├── 🔮 Relic.sol             ─ 聖物 NFT（VRF 容量）
+├── 🛡️ Party.sol             ─ 隊伍 NFT／出征管理
+├── 🏰 DungeonMaster.sol     ─ 地城探索與獎勵邏輯
+├── 💰 PlayerVault.sol       ─ 資金出入、推薦獎勵
+├── 🔥 AltarOfAscension.sol  ─ 升星／進化流程
+├── 📜 PlayerProfile.sol     ─ 玩家 SBT 檔案
+├── 🏆 VipStaking.sol        ─ VIP 質押與 NFT 發放
+└── 🎲 VRFManager.sol        ─ Chainlink VRF v2.5 管理
 ```
 
 #### **5.3 鏈上隨機性實現** ✅ **已完全實裝 v1.3.4**
@@ -97,27 +98,27 @@ function requestRandomForUser(
 
 #### **5.7 跨鏈擴展計劃**
 
-**Phase 1**: BNB Chain 主網
-**Phase 2**: Polygon 和 Arbitrum 支持
-**Phase 3**: 多鏈資產互操作性
-**Phase 4**: Layer 2 和側鏈集成
+- **Phase 1（進行中）**：BNB Chain 主網營運與效能優化（現行唯一正式版本）
+- **Phase 2（規劃中）**：評估 Polygon、Arbitrum 等網路的部署成本與使用者需求
+- **Phase 3（規劃中）**：跨鏈資產互操作性設計（需 DAO 核准後啟動）
+- **Phase 4（規劃中）**：Layer2 / 側鏈整合，將依社群投票與審計結果排程
 
 #### **5.8 技術路線圖**
 
-**2025 Q3:**
-- ✅ 核心合約部署
-- ✅ 基礎遊戲循環實現
-- ✅ NFT 鑄造和交易
+**2025 Q3**
+- ✅ DungeonCore、Hero、Relic、Party、PlayerVault 主網部署
+- ✅ 前端 PWA 與核心遊戲循環正式上線
+- ✅ VIP 質押與升星系統投入營運
 
-**2025 Q4:**
-- ✅ Chainlink VRF 集成 (已完成 v1.3.4)
-- 🔄 高級地城機制
-- 🔄 移動端 DApp
+**2025 Q4**
+- ✅ Chainlink VRF v2.5 佈署完成並啟用批量揭示流程
+- 🔄 高階地城機制（開發中，預計 v1.6 落地）
+- 🔄 行動裝置錢包體驗最佳化（持續迭代中）
 
-**2026 Q1:**
-- 📋 DAO 治理上線
-- 📋 跨鏈橋接實現
-- 📋 Layer 2 擴展
+**2026 Q1（規劃中）**
+- 🟡 DAO 治理框架（需求討論與安全審計後啟用）
+- 🟡 跨鏈橋與 Layer2 擴展（技術評估與合作洽談中）
+- 🟡 資產互通 SDK（視多鏈時程進度排程）
 
 ---
 
