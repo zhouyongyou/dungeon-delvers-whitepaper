@@ -1,6 +1,6 @@
 # 11. 技術架構總覽 (Technical Architecture Overview)
 
-> **V1.0 第一代遊戲技術架構** - 2025年9月更新
+> **V1.0 技術架構** · 2025 年 10 月校準版（對應產品 v1.5.0.0）
 
 ## 11.1 專案架構模式 (Project Architecture Pattern)
 
@@ -33,16 +33,22 @@
 
 **技術亮點**:
 ```typescript
-// 統一配置管理系統
-const contracts = await loadContractsFromCDN();
-
-// 現代化 Web3 集成
-const { writeContract } = useWriteContract();
-await writeContract({
-  address: contracts.HERO_ADDRESS,
-  abi: HeroABI,
-  functionName: 'mint'
+// wagmi v2 + WalletConnect v2 多錢包佈局
+const config = createConfig({
+  chains: [bsc],
+  connectors: [
+    metaMask({ shimDisconnect: true }),
+    walletConnect({
+      projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID,
+      disableProviderPing: true,
+      mobileLinks: ['metamask', 'trust', 'okx'],
+    }),
+    injected({ shimDisconnect: true }),
+  ],
 });
+
+const { connectAsync, connectors } = useConnect();
+await connectAsync({ connector: connectors.find(c => c.id === 'walletConnect')! });
 ```
 
 ### 🔗 智能合約層 - DungeonDelversContracts  
@@ -52,16 +58,19 @@ await writeContract({
 
 **核心合約**:
 ```solidity
-// 核心 NFT 合約
-SoulDelver.sol     // 探索者 NFT
-SoulRelic.sol      // 魂器 NFT  
-DelverSquad.sol    // 探索小隊 NFT
-VIPCard.sol        // VIP 會員卡 NFT
+// NFT 與遊戲模組
+Hero.sol             // 英雄 NFT
+Relic.sol            // 聖物 NFT
+Party.sol            // 隊伍 NFT
+PlayerProfile.sol    // 玩家 SBT
 
-// 遊戲邏輯合約
-DungeonMaster.sol  // 地城探索主合約
-SoulVault.sol      // 智能金庫
-VRFManager.sol     // Chainlink VRF 隨機數
+// 核心流程
+DungeonCore.sol      // 中央協調與權限管理
+PlayerVault.sol      // 資金流與推薦
+DungeonMaster.sol    // 地城／遠征機制
+AltarOfAscension.sol // 升星與素材消耗
+VipStaking.sol       // VIP 質押
+VRFManager.sol       // Chainlink VRF v2.5
 ```
 
 **安全特性**:
@@ -75,31 +84,36 @@ VRFManager.sol     // Chainlink VRF 隨機數
 **專案位置**: `/Users/sotadic/Documents/GitHub/dungeon-delvers-subgraph`  
 **版本**: v1.5.0.0  
 
-**索引數據**:
+**索引核心資料結構**:
 ```graphql
 type Player {
   id: ID!
-  heroes: [Hero!]! @derivedFrom(field: "owner")
-  relics: [Relic!]! @derivedFrom(field: "owner") 
-  totalMinted: BigInt!
-  lastActivity: BigInt!
+  heroCount: Int!
+  relicCount: Int!
+  partyCount: Int!
+  referralRelation: ReferralRelation @derivedFrom(field: "user")
+  referredUsers: [ReferralRelation!] @derivedFrom(field: "referrer")
 }
 
 type Hero {
   id: ID!
   tokenId: BigInt!
-  owner: Player!
-  rarity: Int!
-  level: Int!
-  experience: BigInt!
+  contractAddress: Bytes!
+  owner: Player
+  rarity: Int
+  power: BigInt
+  status: String!
+  isBurned: Boolean!
+  createdAt: BigInt!
+  burnedAt: BigInt
 }
 ```
 
 **查詢能力**:
-- 實時 NFT 數據同步
-- 用戶資產查詢和統計
+- 實時 NFT / VIP / Vault 事件同步
+- 玩家資產、推薦、抽稅明細
 - 遊戲事件歷史追蹤
-- 排行榜和分析數據
+- 排行榜與健康檢查儀表板
 
 ### 🚀 後端 API - dungeon-delvers-metadata-server
 **技術棧**: Node.js + Express.js + ethers.js  
@@ -108,26 +122,20 @@ type Hero {
 **部署**: Render  
 
 **API 端點設計**:
-```javascript
-// NFT Metadata 服務
-GET /metadata/:type/:id
-
-// 系統健康檢查  
-GET /health
-GET /api/config/status
-GET /admin/cache-stats
-
-// 配置管理
-POST /api/config/refresh
+```http
+GET /metadata/:type/:id        # VRF 未完成時回傳 202 + Retry-After
+POST /metadata/refresh/:id     # 手動清除緩存並重新抓取
+GET  /health                   # 子圖端點、快取、Redis 狀態
+GET  /admin/cache-stats        # 緩存命中率與 TTL 觀察
 ```
 
 **核心特性**:
 - 動態 NFT metadata 生成（純子圖資料來源，零 RPC 成本）
-- SVG 圖像實時渲染
+- SVG / JSON 模板化輸出，支援行動裝置與市集快取
 - 多層緩存策略 (記憶體 + CDN) 與事件觸發式刷新
-- 統一配置管理（支援 `config/contracts.json` 與環境變數覆寫）
-- Goldsky / The Graph 自動切換機制與健康快照 (`/health` 回傳 `subgraphEndpoints`)
-- 高可用性與速率限制、Helmet 安全強化
+- 未揭示狀態統一回傳 `202 Accepted`，避免市集長期快取 404
+- Goldsky / The Graph 優先級切換與健康快照 (`/health` 回傳 `subgraphEndpoints`)
+- Helmet、速率限制與 Redis backoff 保護
 
 ### 📚 文檔系統 - dungeon-delvers-whitepaper  
 **技術棧**: GitBook + Markdown  
@@ -189,17 +197,17 @@ DungeonDelversContracts/config/deployed-addresses.mainnet.json
 ### 🛡️ 安全措施
 - **智能合約**: 多重簽名 + 時間鎖
 - **API 服務**: CORS + 速率限制 + Helmet 安全頭
-- **數據傳輸**: HTTPS + CSP 策略
-- **錢包集成**: 官方 wallet 連接器
+- **數據傳輸**: HTTPS + 嚴格 CSP
+- **錢包集成**: 官方 MetaMask Connector + WalletConnect v2 + Injected fallback
 
 ### 📊 監控和告警
 ```javascript
-// 健康檢查系統
+// 健康檢查端點（例）
 {
-  "frontend": "https://dungeondelvers.xyz/health",
-  "backend": "https://api.dungeondelvers.xyz/health", 
-  "subgraph": "https://api.studio.thegraph.com/...",
-  "contracts": "BSCScan API monitoring"
+  "frontend": "https://www.dungeondelvers.xyz/health",
+  "backend": "https://dungeon-delvers-metadata-server.onrender.com/health",
+  "subgraph": "https://api.goldsky.com/status/dungeon-delvers",
+  "contracts": "BscScan 自動化監控 + Discord Webhook"
 }
 ```
 
@@ -239,8 +247,8 @@ DungeonDelversContracts/config/deployed-addresses.mainnet.json
 
 ---
 
-> **💡 開發者注意**: 此架構文檔會隨著 V1.0 第一代遊戲的發展持續更新。所有技術決策都以用戶體驗和系統穩定性為優先考量。
+> **💡 開發者注意**: 此架構文檔將依 v1.x 發布節奏滾動調整，所有決策均以使用者體驗與系統穩定性為優先。
 
-**最後更新**: 2025年9月2日  
-**架構版本**: V1.0 第一代遊戲  
+**最後更新**: 2025 年 10 月 12 日  
+**架構版本**: V1.5.0.0（Soulbound Saga 第一代）  
 **維護團隊**: DungeonDelvers 開發團隊
