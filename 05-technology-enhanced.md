@@ -14,7 +14,7 @@
 
 #### **5.2 智能合約架構**
 
-Soulbound Saga 採用模組化部署，**目前僅在 BNB Chain 主網營運**。所有合約皆於 v1.5.0.0 完成升級與驗證，主要模組如下：
+Soulbound Saga 採用模組化部署，**目前僅在 BASE Chain 主網營運**。所有合約皆於 v2.0.0.0 完成升級與驗證，主要模組如下：
 
 ```
 🏛️ DungeonCore.sol          ─ 核心註冊與跨模組協調
@@ -98,7 +98,7 @@ function requestRandomForUser(
 
 #### **5.7 跨鏈擴展計劃**
 
-- **Phase 1（進行中）**：BNB Chain 主網營運與效能優化（現行唯一正式版本）
+- **Phase 1（進行中）**：BASE Chain 主網營運與效能優化（現行唯一正式版本）
 - **Phase 2（規劃中）**：評估 Polygon、Arbitrum 等網路的部署成本與使用者需求
 - **Phase 3（規劃中）**：跨鏈資產互操作性設計（需 DAO 核准後啟動）
 - **Phase 4（規劃中）**：Layer2 / 側鏈整合，將依社群投票與審計結果排程

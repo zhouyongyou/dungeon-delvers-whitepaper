@@ -17,14 +17,14 @@
 1. 安裝或更新 MetaMask（或支援 EIP-1193 的瀏覽器錢包）。  
 2. 於 `https://www.dungeondelvers.xyz` 開啟遊戲，點擊右上角「連接錢包」。  
 3. 在錢包清單中選擇「MetaMask」或「瀏覽器錢包」，瀏覽器將呼叫擴充功能並完成簽署。  
-4. 如使用 OKX / Rabby 等非 MetaMask 錢包，請確認擴充功能允許對 BNB Chain 的授權。  
+4. 如使用 OKX / Rabby 等非 MetaMask 錢包，請確認擴充功能允許對 BASE Chain 的授權。  
 5. 若偵測不到任何 injected provider，請改用 WalletConnect 手機掃碼或檢查錢包是否被瀏覽器阻擋。  
 
 ## 15.3 行動裝置與 WalletConnect
 
 1. 建議在行動裝置的預設瀏覽器（Safari / Chrome）開啟官方網站。  
 2. 點選「連接錢包」後選擇 **WalletConnect**，畫面會顯示 QR Code 或直接跳出錢包列表。  
-3. MetaMask / Trust Wallet / OKX App 會自動接管並詢問是否連線 BNB Chain。  
+3. MetaMask / Trust Wallet / OKX App 會自動接管並詢問是否連線 BASE Chain。  
 4. 若未顯示錢包彈窗，可在手機上手動打開該錢包 App，切換至「掃描」或「連接 DApp」頁籤貼上連線網址。  
 5. 完成簽署後回到瀏覽器，頁面會自動更新連線狀態；若 30 秒內未完成，點擊「重新偵測」即可。  
 
@@ -48,7 +48,7 @@
 ## 15.6 建議的最佳實務
 
 - 儘量使用最新版錢包 App / 擴充功能與桌面瀏覽器，保持與 WalletConnect v2 相容。  
-- 完成連線後立即鎖定 BNB Chain，避免切換到不支援的網路。  
+- 完成連線後立即鎖定 BASE Chain，避免切換到不支援的網路。  
 - 若需切換裝置，先在原裝置中按下「斷開連接」再重新掃描 QR Code，可避免 Session 殘留。  
 - 測試與開發人員可透過 `window.__WALLET_DEBUG__`（僅在 DEV 模式啟用）檢視目前連線狀態與 connector。  
 
