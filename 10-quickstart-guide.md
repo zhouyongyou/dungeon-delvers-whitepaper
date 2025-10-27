@@ -11,22 +11,23 @@
 
 **網路設置：**
 ```
-網路名稱: BSC Mainnet
-RPC URL: https://bsc-dataseed1.binance.org/
-Chain ID: 56
-符號: BNB
-區塊瀏覽器: https://bscscan.com
+網路名稱: Base Mainnet
+RPC URL: https://mainnet.base.org
+Chain ID: 8453
+符號: ETH
+區塊瀏覽器: https://basescan.org
 ```
 
-#### **步驟 2: 獲取 BNB 和 $SOUL 🪙**
+#### **步驟 2: 獲取 ETH 和 $SOUL 🪙**
 
-**獲取 BNB (用於 Gas 費用):**
-- 從交易所 (如 Binance, OKX) 提取到您的錢包
-- 建議保持至少 0.01 BNB 用於交易費用
+**獲取 ETH (用於 Gas 費用):**
+- 從交易所 (如 Coinbase, OKX) 提取 BASE 鏈 ETH 到您的錢包
+- 或使用 BASE Bridge 將 Ethereum 主網 ETH 橋接到 BASE
+- 建議保持至少 0.001 ETH 用於交易費用
 
 **獲取 $SOUL (遊戲代幣):**
-- 🥞 [PancakeSwap](https://pancakeswap.finance/swap) - 主要交易平台
-- 📊 [DexScreener](https://dexscreener.com/bsc/YOUR_PAIR) - 價格追蹤
+- 🦄 [Uniswap V3](https://app.uniswap.org) - 主要交易平台（BASE 鏈）
+- 📊 [DexScreener](https://dexscreener.com/base/YOUR_PAIR) - 價格追蹤
 - 💰 通過遊戲內探索地城賺取
 
 #### **步驟 3: 連接到 Soulbound Saga 🌐**
@@ -37,8 +38,8 @@ Chain ID: 56
 4. 確認連接請求
 
 **首次連接檢查清單:**
-- ✅ 錢包已連接到 BSC 網路
-- ✅ 有足夠的 BNB 支付 Gas 費用
+- ✅ 錢包已連接到 BASE 網路
+- ✅ 有足夠的 ETH 支付 Gas 費用
 - ✅ 瀏覽器允許彈出窗口
 
 #### **步驟 4: 鑄造您的第一個靈魂探索者 ⚔️**
@@ -93,7 +94,7 @@ Chain ID: 56
 
 **執行探索：**
 1. 選擇要派遣的小隊
-2. 確認探索費用 (BNB)
+2. 確認探索費用 (ETH)
 3. 點擊「開始探索」
 4. 等待區塊鏈確認結果
 
@@ -145,7 +146,7 @@ Chain ID: 56
 ## 🎯 新手常見問題
 
 **Q: 我需要投資多少才能開始？**
-A: 最低只需要少量 BNB 用於 Gas 費用和一次鑄造費用即可開始。
+A: 最低只需要少量 ETH 用於 Gas 費用和一次鑄造費用即可開始。BASE 鏈的 Gas 費用非常低廉。
 
 **Q: 如果我的探索失敗了怎麼辦？**
 A: 失敗仍會獲得經驗值，且不會損失 NFT。這是學習和成長的過程。

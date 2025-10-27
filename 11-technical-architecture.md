@@ -52,9 +52,9 @@ await connectAsync({ connector: connectors.find(c => c.id === 'walletConnect')! 
 ```
 
 ### 🔗 智能合約層 - DungeonDelversContracts  
-**技術棧**: Solidity + Hardhat + OpenZeppelin  
-**專案位置**: `/Users/sotadic/Documents/DungeonDelversContracts`  
-**網路**: BNB Chain (BSC) Mainnet  
+**技術棧**: Solidity + Foundry + OpenZeppelin
+**專案位置**: `/Users/sotadic/Documents/DungeonDelversContracts`
+**網路**: BASE Mainnet (Chain ID: 8453)  
 
 **核心合約**:
 ```solidity
@@ -179,9 +179,9 @@ DungeonDelversContracts/config/deployed-addresses.mainnet.json
 
 ### 🚀 部署環境
 - **前端**: Vercel (自動部署)
-- **後端**: Render (容器化部署)  
-- **子圖**: The Graph Studio (去中心化索引)
-- **智能合約**: BNB Chain (永久部署)
+- **後端**: Render (容器化部署)
+- **子圖**: Goldsky + The Graph Network (去中心化索引)
+- **智能合約**: BASE Mainnet (永久部署)
 
 ### 🔄 持續集成流程
 ```yaml
